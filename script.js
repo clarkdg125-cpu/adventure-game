@@ -32,12 +32,41 @@ function renderQuestion() {
     answersEl.textContent = "";
 
     switch (currentState) {
-        case "start":
+         case "start":
             questionEl.textContent =
                 "You are a pirate searching for hidden treasure. One day, you find a treasure map that leads to a mysterious island. Make your choices carefully to find the treasure and avoid danger. What will you do?";
             addAnswerButton("Face the enemy pirates", "pirates");
             addAnswerButton("Explore the island", "island");
             addAnswerButton("Survive the storm", "storm");
+            break;
+
+        //Path 1: Enemy Pirates
+        case "pirates":
+            questionEl.textContent = "You meet a group of enemy pirates. What will you do?";
+            addAnswerButton("Fight the pirates", "pirates_fight");
+            addAnswerButton("Run away", "pirates_run");
+            break;
+
+        case "pirates_fight":
+            questionEl.textContent = "You chose to fight the pirates. What will you do next?";
+            addAnswerButton("Take their treasure map", "pirates_map");
+            addAnswerButton("Escape to the island", "pirates_escape");
+            break;
+
+        case "pirates_run":
+            questionEl.textContent = "You chose to run away. What will you do next?";
+            addAnswerButton("Take their treasure map", "pirates_map");
+            addAnswerButton("Escape to the island", "pirates_escape");
+            break;
+
+        case "pirates_map":
+            questionEl.textContent = "You take their treasure map. You now have a new map!";
+            addAnswerButton("Continue", "treasure");
+            break;
+
+        case "pirates_escape":
+            questionEl.textContent = "You escape to the island safely!";
+            addAnswerButton("Continue", "treasure");
             break;
 
         default:
