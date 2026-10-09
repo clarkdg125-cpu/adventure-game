@@ -127,12 +127,27 @@ function renderQuestion() {
             questionEl.textContent = "You take the lifeboat, survive the storm, and reach the island!";
             addAnswerButton("Continue", "treasure");
             break;
-            
+        
+        
+        //Ending
+        case "treasure":
+            questionEl.textContent = "You reach the treasure chest. When you open it, you discover a pile of gold and jewels!";
+            conclusionEl.textContent = "You win the adventure!";
+            conclusionEl.classList.remove("hidden");
+            nextBtn.classList.remove("hidden");
+            break;
+
         default:
-            questionEl.textContent = "blank";
+            questionEl.textContent = "Something went wrong. Let's start over.";
             addAnswerButton("Back to the start", "start");
     }
 }
+
+//Restarts the game from the beginning
+nextBtn.addEventListener("click", () => {
+    currentState = "start";
+    renderQuestion();
+});
 
 window.onload = () => {
     renderQuestion();
