@@ -6,8 +6,35 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f5ecd7;
+    color: #2b1d0e;
+    display: flex;
+    justify-content: center;
+}
+
+#game-container {
+    width: 50%;
+    margin: 2em 0;
+    padding: 1.5em;
+    border: 2px solid #2b1d0e;
+    background-color: #fffaf0;
+}
+
+#question-container p {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+}
+
+#conclusion {
+    text-transform: uppercase;
 }
 
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #game-container {
+        width: 90%;
+    }
 }
