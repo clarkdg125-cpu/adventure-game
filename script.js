@@ -30,7 +30,9 @@ function addAnswerButton(text, nextState) {
 //Shows the story text and choices for the current state
 function renderQuestion() {
     answersEl.textContent = "";
-
+    conclusionEl.classList.add("hidden");
+    nextBtn.classList.add("hidden");
+    
     switch (currentState) {
          case "start":
             questionEl.textContent =
