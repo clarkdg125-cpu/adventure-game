@@ -69,6 +69,36 @@ function renderQuestion() {
             addAnswerButton("Continue", "treasure");
             break;
 
+        //Path 2: The Island
+        case "island":
+            questionEl.textContent = "You arrive at the island where the treasure is hidden. What will you do?";
+            addAnswerButton("Explore a cave", "island_cave");
+            addAnswerButton("Search the beach", "island_beach");
+            break;
+
+        case "island_cave":
+            questionEl.textContent = "You chose to explore a cave. What will you do next?";
+            addAnswerButton("Open a mysterious chest", "island_chest");
+            addAnswerButton("Follow footprints into the forest", "island_forest");
+            break;
+
+        case "island_beach":
+            questionEl.textContent = "You chose to search the beach. What will you do next?";
+            addAnswerButton("Open a mysterious chest", "island_chest");
+            addAnswerButton("Follow footprints into the forest", "island_forest");
+            break;
+           
+        case "island_chest":
+            questionEl.textContent = "You open the mysterious chest and find a clue that leads to the treasure!";
+            addAnswerButton("Continue", "treasure");
+            break;   
+            
+        
+        case "island_forest":
+            questionEl.textContent = "You follow the footprints into the forest and find a clue that leads to the treasure!";
+            addAnswerButton("Continue", "treasure");
+            break;
+
         default:
             questionEl.textContent = "blank";
             addAnswerButton("Back to the start", "start");
