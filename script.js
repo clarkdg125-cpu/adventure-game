@@ -99,6 +99,35 @@ function renderQuestion() {
             addAnswerButton("Continue", "treasure");
             break;
 
+        //Path 3: The Storm
+        case "storm":
+            questionEl.textContent = "A storm appears while you sail toward the island. What will you do?";
+            addAnswerButton("Sail through the storm", "storm_sail");
+            addAnswerButton("Find shelter", "storm_shelter");
+            break;
+        
+        case "storm_sail":
+            questionEl.textContent = "You chose to sail through the storm. What will you do next?";
+            addAnswerButton("Repair the ship", "storm_repair");
+            addAnswerButton("Use a lifeboat to reach the island", "storm_lifeboat");
+            break;
+    
+        case "storm_shelter":
+            questionEl.textContent = "You chose to find shelter. What will you do next?";
+            addAnswerButton("Repair the ship", "storm_repair");
+            addAnswerButton("Use a lifeboat to reach the island", "storm_lifeboat");
+            break;
+
+        case "storm_repair":
+            questionEl.textContent = "You repair the ship, survive the storm, and reach the island!";
+            addAnswerButton("Continue", "treasure");
+            break;
+
+        case "storm_lifeboat":
+            questionEl.textContent = "You take the lifeboat, survive the storm, and reach the island!";
+            addAnswerButton("Continue", "treasure");
+            break;
+            
         default:
             questionEl.textContent = "blank";
             addAnswerButton("Back to the start", "start");
