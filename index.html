@@ -7,16 +7,17 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="game-container">
+        <main id="game-container">
             <h1>Pirate Adventure</h1>
-            <div id="question-container">
+            <div id="question-container" aria-live="polite">
                 <p id="question">Your adventure begins now...</p>
+                <p id="conclusion" hidden></p>
             </div>
-            <ul id="answers">
+            <ul id="answers" aria-label="Your choices">
                 <!-- Answer buttons will be injected here by JavaScript -->
             </ul>
-            <button id="next-btn" onclick="nextQuestion()">Next</button>
-        </div>
+            <button id="next-btn" type="button" hidden>Play Again</button>
+        </main>
         <script src="script.js"></script>
     </body>
 </html>
