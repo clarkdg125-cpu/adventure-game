@@ -1,4 +1,3 @@
-<!-- 
 Adventure Game Plan: Pirate Treasure
 
 Game Overview
@@ -44,4 +43,3 @@ No matter which path the player chooses, they eventually reach the treasure ches
 
 Story Branches:
 The game starts with the player finding a treasure map. They choose to face enemy pirates, explore the island, or survive a storm. Each path has two decisions. All paths eventually lead to the treasure and the ending.
--->
